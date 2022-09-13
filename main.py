@@ -1,7 +1,9 @@
 import math
 import telebot
 
-bot = telebot.TeleBot('5751300078:AAExYVTnPW7WsPSzn-iGxAbpIl5aufZ6ztk')
+file = open('token.txt', mode='r')
+bot = telebot.TeleBot(file.read())
+file.close()
 
 
 @bot.message_handler(commands=['start'])
